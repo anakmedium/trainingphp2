@@ -7,7 +7,8 @@
 
 	use Controllers\Access;
 	use Controllers\Task;
-	use Models\Model_Access;
+	use Controllers\Api;
+	
 
 	/**
 	 * Buat objek dari kelas access
@@ -15,12 +16,15 @@
 
 	$access = new Access();
 	$task = new Task();
+	$api = new Api();
 
 	$login = false;
 	if(isset($_COOKIE['appkey']) && !empty($_COOKIE['appkey'])) {
 		$apikey = $access->checkAppKey();
 		$login = ($_COOKIE['appkey'] == $apikey)? true : false;
 	}
+
+	// echo '<pre>'; print_r($_GET['act']) ;echo '</pre>';die();
 		
 	if($login == true) {
 		if(!isset($_GET['act']))
@@ -66,6 +70,10 @@
 			}
 		}
 	}
+
+	// if($_GET['act'] == 'api') {
+		
+	// }
 
 
 

@@ -1,0 +1,7 @@
+RewriteEngine On # Turn on the rewriting engine
+# RewriteRule ^api/?$ api.php [NC,L]
+# RewriteRule ^api/([0-9]+)/?$ mahasiswa.php?id=$1 [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ api.php?url=$1 [QSA,L]

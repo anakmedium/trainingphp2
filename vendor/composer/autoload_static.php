@@ -43,12 +43,15 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
     public static $controllerMap = array(
         // diisi controller
         'Controllers\\Access' => __DIR__ . '/..' . '/app/Controllers/Access.php',
+        'Controllers\\Api' => __DIR__ . '/..' . '/app/Controllers/Api.php',
+        'Controllers\\Result' => __DIR__ . '/..' . '/app/Controllers/Result.php',
 
     );
 
     public static $modelMap = array (
         // diisi model
         'Models\\Model_access' => __DIR__ . '/..' . '/app/Models/Model_access.php',
+        'Models\\Model_task' => __DIR__ . '/..' . '/app/Models/Model_task.php',
     );
 
     public static $configMap = array (
