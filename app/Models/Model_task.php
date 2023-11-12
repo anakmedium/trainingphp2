@@ -64,12 +64,19 @@ class Model_task
 
     function load($id)
     {
-        $result = new Result;
 
         $rs = $this->dbh->prepare("SELECT * FROM task WHERE id=?");
         $rs->execute([$id]);
 
         return $rs->fetch();// kalau hasil query hanya satu, gunakan method fetch() bawaan PDO
+    }
+
+    function list()
+    {
+        $rs = $this->dbh->query("SELECT * FROM task");
+        
+
+       return $rs->fetchAll();
     }
 
 }

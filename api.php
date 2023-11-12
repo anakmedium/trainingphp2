@@ -19,12 +19,17 @@ if(isset($methodName) && !empty($methodName)) {
 	switch($methodName){
 		case 'save':
 
-			$result = $api->save();
+			$api->save();
 
+			break;
+		case 'load':
+			$api->load();
+			break;
+		case 'list':
+			$api->list();
 			break;
 	}
 
-	return $result;
 }
  
 ?>
