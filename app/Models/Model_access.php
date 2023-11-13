@@ -46,6 +46,12 @@ class Model_Access
         
     }
 
+    function list(){
+        $rs = $this->dbh->prepare("SELECT * FROM users");
+
+        return $rs;
+    }
+
     function logout() {
         $this->clearLoginCookie();
         $this->clearLoginSession();

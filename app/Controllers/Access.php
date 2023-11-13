@@ -13,7 +13,8 @@ class Access {
     public function index()
     {
         // panggil view login
-        require_once 'app/Views/Access/Index.php';
+        $rs = $this->access->list();
+        require_once ('app/Views/Access/Index.php');
     }
 
     public function login()
@@ -22,7 +23,7 @@ class Access {
         $result  = $this->access->login($params);
 
         if($result->code == 0) {
-            require_once 'app/Views/Task/Index.php';
+            require_once    'app/Views/Task/Index.php';
         } else {
             require_once 'app/Views/Access/Index.php';
         }

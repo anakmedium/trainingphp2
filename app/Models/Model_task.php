@@ -2,6 +2,7 @@
 namespace Models;
 use Libraries\Database;
 use Controllers\Result;
+use PDO;
 
 class Model_task
 {
@@ -75,8 +76,18 @@ class Model_task
     {
         $rs = $this->dbh->query("SELECT * FROM task");
         
-
        return $rs->fetchAll();
+    }
+
+    function loadlist()
+    {
+        $rs = $this->dbh->query("SELECT * FROM task");
+        echo '<pre>'; print_r($rs) ;echo '</pre>';die();
+
+        echo '<pre>'; print_r($rs) ;echo '</pre>';die();
+
+        return $rs;
+     
     }
 
 }

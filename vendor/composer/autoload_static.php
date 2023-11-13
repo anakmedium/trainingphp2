@@ -45,6 +45,7 @@ class ComposerStaticInitd751713988987e9331980363e24189ce
         'Controllers\\Access' => __DIR__ . '/..' . '/app/Controllers/Access.php',
         'Controllers\\Api' => __DIR__ . '/..' . '/app/Controllers/Api.php',
         'Controllers\\Result' => __DIR__ . '/..' . '/app/Controllers/Result.php',
+        'Controllers\\Task' => __DIR__ . '/..' . '/app/Controllers/Task.php',
 
     );
 

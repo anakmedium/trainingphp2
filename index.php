@@ -38,16 +38,8 @@
 			{	case 'logout' :
 					$access->logout();
 					break;
-				case 'home' :
-					$controller->index();
-					break;
-				
-				case 'simpan' :
-					$controller->save();
-					break;
-
-				case 'tampil-data' :
-					$controller->show_data();
+				case 'dashboard' :
+					$task->index();
 					break;
 
 				default : 
