@@ -2,6 +2,7 @@
 namespace Models;
 use Libraries\Database;
 use PDO;
+use Controllers\Result;
 
 class Model_Access
 {
@@ -13,6 +14,7 @@ class Model_Access
     }
 
     function login($params) {
+        $result = new Result;
         $username = $params['username'];
         $password = hash('sha256', $params['password']);
         
@@ -30,10 +32,17 @@ class Model_Access
             $_SESSION['username'] = $isUsers['username'];
 
             $this->setLoginCookie($isUsers['username']);
-            return $isUsers;
+
+            $result->info = "login berhasil";
+            $result->code = 0;
+
+            return $result;
         }
 
-        return false;
+        $result->info = "login gagal";
+        $result->code = 1;
+
+        return $result;
         
     }
 

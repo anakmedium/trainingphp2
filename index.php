@@ -51,7 +51,7 @@
 					break;
 
 				default : 
-					$controller->index();
+					print_r('you dont have permission');
 					break;
 			}
 		}

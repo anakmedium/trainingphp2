@@ -1,3 +1,3 @@
 Welcome back
 
-<a href="/task/?act=logout">Logout</a>
+<a href="/trainingphp2/?act=logout">Logout</a>

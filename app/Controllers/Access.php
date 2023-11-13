@@ -19,15 +19,20 @@ class Access {
     public function login()
     {
         $params = $_POST;
-        $login  = $this->access->login($params);
+        $result  = $this->access->login($params);
 
-        echo '<pre>'; print_r($login) ;echo '</pre>';die();
+        if($result->code == 0) {
+            require_once 'app/Views/Task/Index.php';
+        } else {
+            require_once 'app/Views/Access/Index.php';
+        }
         
     }
 
     public function logout()
     {
-        $logout = $this->access->logout();
+        $this->access->logout();
+        require_once 'app/Views/Access/Index.php';
     }
 
     public function checkAppKey(){
