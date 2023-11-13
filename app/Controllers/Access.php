@@ -20,6 +20,8 @@ class Access {
     {
         $params = $_POST;
         $login  = $this->access->login($params);
+
+        echo '<pre>'; print_r($login) ;echo '</pre>';die();
         
     }
 

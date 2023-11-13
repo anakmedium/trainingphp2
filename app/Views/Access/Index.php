@@ -11,12 +11,12 @@
 				<div class="col-md-4"><h3>Login</h3>
 					<form method="post" action="/task/?act=login">
 					  <div class="form-group">
-					    <label for="exampleInputNim">NIM</label>
-					    <input type="text" class="form-control" id="username" name="username" placeholder="NIM">
+					    <label for="exampleInputNim">Username</label>
+					    <input type="text" class="form-control" id="username" name="username" placeholder="Username">
 					  </div>
 					  <div class="form-group">
-					    <label for="exampleInputNama">Nama</label>
-					    <input type="text" class="form-control" id="password" name="password" placeholder="Nama">
+					    <label for="exampleInputNama">Password</label>
+					    <input type="text" class="form-control" id="password" name="password" placeholder="Password">
 					  </div>
 
 					  <button type="submit" class="btn btn-default">Submit</button>
